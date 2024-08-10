@@ -1,0 +1,9 @@
+# Mac
+.DS_Store
+
+# Old
+archive/
+
+# Don't include unpacked firmware (sorry!)
+**/extracted/
+*.img
