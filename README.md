@@ -1,6 +1,8 @@
 # B5300 CarPlay Reverse Engineering
 
-This repository is a hobby attempt at reverse engineering the popular [B5300 CarPlay / Android Auto head unit](https://www.aliexpress.us/item/3256806677605382.html). Any and all contribution is welcomed and encouraged!
+This repository is a hobby attempt at reverse engineering the popular [B5300 CarPlay / Android Auto head unit](https://www.aliexpress.us/item/3256806677605382.html). 
+
+Any and all contribution is welcomed and encouraged!
 
 > **[Notice]** Unforunately, I can't upload any decompiled firmware here (sorry!). However, the process to unpack the .bin yourself is trivial by following [these instructions](docs/2-unpacking-firmware.md).
 
