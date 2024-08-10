@@ -1,6 +1,7 @@
-# Workspace
+# Firmware RE Workspace
 
 ## unpack.sh
+This script unpacks a `firmware.bin` file into .img partitions and expands the main MINFS filesystem.
 ```
 Example: ./unpack.sh firmware.bin extracted/
 
@@ -9,6 +10,7 @@ Input 2: The destination directory (e.g. "extracted")
 ```
 
 ## repack.sh
+This script builds the filesystem and repacks the resulting .img partitions back into a `firmware.bin` file.
 ```
 Example: ./repack.sh original.bin output.bin extracted/
 
