@@ -1,6 +1,6 @@
 # B5300 CarPlay Reverse Engineering
 
-This repository is a hobby attempt at reverse engineering the popular [B5300 CarPlay / Android Auto head unit](https://www.aliexpress.us/item/3256806677605382.html). 
+This repository is a hobby attempt at reverse engineering the popular [B5300 CarPlay / Android Auto head unit](https://www.aliexpress.us/item/3256806677605382.html).
 
 Any and all contribution is welcomed and encouraged!
 
@@ -32,8 +32,10 @@ More info on factory codes (including screenshots) can be found [here](docs/fact
 
 ## B5300 Specs
 
+- **FCC ID:** [2BD44-B5300](https://fccid.io/2BD44-B5300)
+- **Manufacturer:** Guangzhou Chechi Electronic Technology Co., Ltd.
 - **SoC:** Allwinner F133-B
-- **Operating System:** Melis4.0 RTOS ([source](https://github.com/usr-sse2/lindenis-v833-RTOS-melis-4.0))
+- **Operating System:** [Melis4.0 RTOS](https://github.com/usr-sse2/lindenis-v833-RTOS-melis-4.0)
 
 ## Sources & Credits
 

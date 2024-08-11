@@ -53,7 +53,7 @@ You should now have `firmware.bin` file!
 
 Verify the integrity of the saved .bin using flashrom:
 ```bash
-sudo flashrom --programmer ch341a_spi --verify firmware.bin
+➜  ~ sudo flashrom --programmer ch341a_spi --verify firmware.bin
 ```
 
 Expected output:

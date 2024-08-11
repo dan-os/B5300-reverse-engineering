@@ -1,4 +1,4 @@
-# How-To: Flash firmware
+# How-To: Flash the firmware
 
 This tutorial explains how to flash your SPI flash ROM chip with a new `firmware.bin`.
 

@@ -25,10 +25,59 @@ I've provided the prebuilt tools for extraction in `firmware/bin`. If you're hap
 
 Place a copy of your `firmware.bin` in `firmware/workspace`. Next, simply run the extraction script:
 ```bash
-➜  ~ ./unpack.sh firmware.bin extracted
+➜  ~ ./unpack.sh firmware.bin extracted/
+```
+Expected output:
+```
+Removing old files
+Creating extracted/ directory
+Extracting GPT image to extracted//gpt.img
+
+16336+0 records in
+16336+0 records out
+16728064 bytes transferred in 0.052602 secs (318011939 bytes/sec)
+Attached GPT image to /dev/disk6
+Extracting volume 1 to extracted//1.img
+
+2304+0 records in
+2304+0 records out
+1179648 bytes transferred in 0.007489 secs (157517426 bytes/sec)
+Extracting MINFS volume to extracted//minfs.img
+
+28544+0 records in
+28544+0 records out
+14614528 bytes transferred in 0.075805 secs (192791082 bytes/sec)
+Extracting FAT volume to extracted//fat.img
+
+1792+0 records in
+1792+0 records out
+917504 bytes transferred in 0.004751 secs (193118080 bytes/sec)
+Detaching /dev/disk6
+"disk6" ejected.
+Unpacking MINFS to extracted//minfs
+Unpacking /apps
+Unpacking /apps/AndroidAuto
+Unpacking /apps/CarPlay
+Unpacking /apps/Data
+Unpacking /apps/desktop
+Unpacking /apps/Language
+Unpacking /apps/Logo
+Unpacking /apps/UI2
+Unpacking /apps/UI2/Data
+Unpacking /apps/WallPaper
+Unpacking /etc
+Unpacking /mod
+Unpacking /mod/cedar
+Unpacking /mod/willow
+Unpacking /res
+------------------------------------------------------------------
+dump minfs image file [/b5300-reverse-engineering/firmware/workspace/extracted//minfs.img] succeeded
+Directory Number   : [      15]
+File number        : [     172]
+------------------------------------------------------------------
 ```
 
-If all goes well, the unpacked contents of the dump will appear in a new `extracted` folder and should look something like this:
+If all goes well, the unpacked contents of the dump will appear in a new `extracted/` folder and should look something like this:
 ```bash
 ├── 1.img      # operating system
 ├── fat.img    # user save data
@@ -53,18 +102,18 @@ To unpack the bin, the script extracts the GPT image and attaches it using hdiut
 
 ## Structure Overview
 
-### gpt.img
+### `gpt.img`
 
 This is the GPT partition that contains all other partitions.
 
-### 1.img
+### `1.img`
 
 This partition contains the core Melis4.0 operating system data.
 
-### minfs.img
+### `minfs.img`
 
 This partition contains the built MINFS filesystem. This is where the application logic lies and so likely is of most interest to you.
 
-### fat.img
+### `fat.img`
 
 This partition contains device save data such as the active start screen image, current Config.ini file, and various application state data.
